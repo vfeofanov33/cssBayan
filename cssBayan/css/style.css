@@ -1,0 +1,28 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    background-color: #fffcd9;
+}
+
+.container 
+{
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.header-container
+{
+    border-bottom: 1px solid #b9b9b9;
+}
+
+.header-title
+{
+    padding: 20px 0;
+    font-size: 40px;
+    font-weight: 700;
+}
