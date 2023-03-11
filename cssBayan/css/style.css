@@ -7,22 +7,156 @@ body
 {
     font-family: 'Roboto', sans-serif;
     background-color: #fffcd9;
+    padding-bottom: 50px;
 }
 
 .container 
 {
-    max-width: 1320px;
+    max-width: 900px;
     margin: 0 auto;
 }
-
-.header-container
-{
-    border-bottom: 1px solid #b9b9b9;
-}
-
 .header-title
 {
     padding: 20px 0;
     font-size: 40px;
     font-weight: 700;
+}
+
+.section-img
+{
+    display: block;
+    width: 0%;
+    margin: 0 auto;
+    transition: all 2s;
+}
+
+.section-sign1
+{
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+.section-sign2
+{
+    display: none;
+    width: 30px;
+    height: 30px;
+    transition: all 5s;
+}
+
+.section-input
+{
+    display: none;
+}
+
+.section-text
+{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-label
+{
+    font-size: 30px;
+    font-weight: 700;
+    color: #002aff;
+    cursor: pointer;
+    border-top: 5px solid #000000;
+}
+
+.main-container:hover .section-label
+{
+    color: #000000;
+}
+
+.main-container:hover .section-label > .section-text > .section-sign1
+{
+    display: block;
+}
+
+.section-input:checked + .section-label
+{
+    color: #000000;
+}
+
+.section-input:checked + .section-label > .section-img
+{
+    display: block;
+    width: 40%;
+}
+
+.section-input:checked + .section-label > .section-text > .section-sign1
+{
+    display: none;
+}
+
+.main-container:hover .section-input:checked + .section-label > .section-text > .section-sign2
+{
+    display: block;
+}
+
+.section-input:hover + .section-label > .section-img
+{
+    display: block;
+    width: 40%;
+}
+
+.section-input:hover + .section-label > .section-text > .section-sign1
+{
+    display: none;
+}
+
+.section-input:hover + .section-label > .section-text > .section-sign2
+{
+    display: block;
+}
+
+@media (max-width: 940px)
+{
+    .container
+    {
+        max-width: 500px;
+    }
+
+    .header-title
+    {
+        font-size: 30px;
+    }
+
+    .section-label
+    {
+        color: #000000;
+        font-size: 20px;
+    }
+
+    .section-sign1
+    {
+        display: block;
+    }
+
+    .section-input:checked + .section-label > .section-text > .section-sign2
+    {
+        display: block;
+    }
+}
+
+@media (max-width: 540px)
+{
+    .container
+    {
+        max-width: 290px;
+    }
+
+    .header-title
+    {
+        font-size: 20px;
+    }
+
+    .section-label
+    {
+        font-size: 10px;
+    }
 }
